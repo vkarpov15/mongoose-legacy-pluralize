@@ -1,6 +1,6 @@
 {
   "name": "mongoose-legacy-pluralize",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Legacy pluralization logic for mongoose",
   "main": "index.js",
   "repository": {
@@ -12,7 +12,7 @@
     "mongodb"
   ],
   "peerDependencies": {
-    "mongoose": "5.x"
+    "mongoose": "*"
   },
   "author": "Valeri Karpov <val@karpov.io>",
   "license": "Apache 2.0",
