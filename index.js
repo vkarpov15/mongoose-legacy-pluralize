@@ -82,7 +82,8 @@ var uncountables = exports.uncountables;
 
 function pluralize(str) {
   var found;
-  if (!~uncountables.indexOf(str.toLowerCase())) {
+  str = str.toLowerCase();
+  if (!~uncountables.indexOf(str)) {
     found = rules.filter(function(rule) {
       return str.match(rule[0]);
     });
