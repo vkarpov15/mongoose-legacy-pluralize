@@ -15,7 +15,7 @@
     "mongoose": "*"
   },
   "author": "Valeri Karpov <val@karpov.io>",
-  "license": "Apache 2.0",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/vkarpov15/mongoose-legacy-pluralize/issues"
   },
