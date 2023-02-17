@@ -4,8 +4,6 @@ module.exports = pluralize;
  * Pluralization rules.
  *
  * These rules are applied while processing the argument to `toCollectionName`.
- *
- * @deprecated remove in 4.x gh-1350
  */
 
 exports.pluralization = [
@@ -72,6 +70,11 @@ exports.uncountables = [
 ];
 var uncountables = exports.uncountables;
 
+var exceptions = new Map([
+  ['human', 'humans'],
+  ['vertex', 'vertices']
+]);
+
 /*!
  * Pluralize function.
  *
@@ -83,6 +86,9 @@ var uncountables = exports.uncountables;
 function pluralize(str) {
   var found;
   str = str.toLowerCase();
+  if (exceptions.has(str)) {
+    return exceptions.get(str);
+  }
   if (!~uncountables.indexOf(str)) {
     found = rules.filter(function(rule) {
       return str.match(rule[0]);
