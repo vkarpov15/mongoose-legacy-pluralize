@@ -71,8 +71,7 @@ exports.uncountables = [
 var uncountables = exports.uncountables;
 
 var exceptions = new Map([
-  ['human', 'humans'],
-  ['vertex', 'vertices']
+  ['human', 'humans']
 ]);
 
 /*!
