@@ -7,7 +7,7 @@ module.exports = pluralize;
  */
 
 exports.pluralization = [
-  [/human$/gi, '$1ens'],
+  [/human$/gi, 'humans'],
   [/(m)an$/gi, '$1en'],
   [/(pe)rson$/gi, '$1ople'],
   [/(child)$/gi, '$1ren'],
@@ -71,10 +71,6 @@ exports.uncountables = [
 ];
 var uncountables = exports.uncountables;
 
-var exceptions = new Map([
-  ['human', 'humans']
-]);
-
 /*!
  * Pluralize function.
  *
@@ -86,9 +82,6 @@ var exceptions = new Map([
 function pluralize(str) {
   var found;
   str = str.toLowerCase();
-  if (exceptions.has(str)) {
-    return exceptions.get(str);
-  }
   if (!~uncountables.indexOf(str)) {
     found = rules.filter(function(rule) {
       return str.match(rule[0]);
