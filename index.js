@@ -4,11 +4,10 @@ module.exports = pluralize;
  * Pluralization rules.
  *
  * These rules are applied while processing the argument to `toCollectionName`.
- *
- * @deprecated remove in 4.x gh-1350
  */
 
 exports.pluralization = [
+  [/human$/gi, 'humans'],
   [/(m)an$/gi, '$1en'],
   [/(pe)rson$/gi, '$1ople'],
   [/(child)$/gi, '$1ren'],
