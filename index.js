@@ -7,6 +7,7 @@ module.exports = pluralize;
  */
 
 exports.pluralization = [
+  [/human$/gi, '$1ens'],
   [/(m)an$/gi, '$1en'],
   [/(pe)rson$/gi, '$1ople'],
   [/(child)$/gi, '$1ren'],
